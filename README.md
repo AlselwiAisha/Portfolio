@@ -74,7 +74,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/AlselwiAisha/Hello_Microverse-.git
+  git clone https://github.com/AlselwiAisha/Portfolio.git
 ```
 
 ### Install
@@ -139,7 +139,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AlselwiAisha/Hello_Microverse-/issues/).
+Feel free to check the [issues page](https://github.com/AlselwiAisha/Portfolio/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
