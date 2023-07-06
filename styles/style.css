@@ -9,6 +9,14 @@
   color: #1a2236;
 }
 
+.white {
+  color: #fff;
+}
+
+.margin20 {
+  margin: 20px;
+}
+
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -30,6 +38,9 @@
 
 .btn {
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   background-color: #1a2236;
   margin: 10px 0 10px 0;
@@ -39,14 +50,136 @@
 .btn:hover {
   color: #1a2236;
   background-color: white;
+  border: #1a2236 solid 1px;
+}
+
+.btn:active {
+  color: #1a2236;
+  background-color: white;
+  border: #1a2236 solid 2px;
 }
 
 .headlineImage {
+  width: 99%;
+}
+
+/* ---------Projects Section---------- */
+.project {
   width: 100%;
+  display: grid;
+}
+
+.project img {
+  width: 99.98%;
+  height: 186px;
+}
+
+.proj-card {
+  background-color: #1a2236;
+  padding: 20px;
+}
+
+.proj-name {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.proj-langs {
+  margin: 20px 20px 20px 0;
+  display: grid;
+  grid-template-columns: 25% 30% 30%;
+  font-size: 10.33px;
+  font-weight: 300;
+  list-style: none;
+}
+
+.proj-langs li a {
+  margin: 10px 10px 10px 0;
+  background-color: #98dede;
+  color: #1a2236;
+  border: #1a2236 solid 0.5px;
+  padding: 6px 8px 6px 8px;
+  text-decoration: inherit;
+}
+
+.proj-card .btn {
+  border: #fff solid 1px;
+  font-size: 16px;
+}
+
+.btn .bx {
+  margin-left: 10px;
+  font-size: 25px;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+/* ---------------About section------------------- */
+.blue-bg {
+  background-color: #1c528a;
+}
+
+.red-bg {
+  background-color: #e2505c;
+}
+
+.yellow-bg {
+  background-color: #febf52;
+}
+
+.about-sec .sec-main-card {
+  margin-bottom: 5px;
+}
+
+.skill-card {
+  display: grid;
+  margin: 20px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 800;
+  list-style: none;
+}
+
+.skill {
+  width: 100%;
+  height: 289px;
+  margin-top: 10px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 102px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.skill .skill-text {
+  width: 100%;
+  margin: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  grid-column: 1/5;
+  grid-row: 1/4;
+}
+
+.skill-text ul {
+  margin: 25px;
+  list-style: disc;
+}
+
+.skill-text ul li {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+.skill img {
+  width: 102px;
+  height: 102px;
+  padding: 0;
+  grid-column: 4/5;
+  grid-row: 3/4;
 }
 
 @media only screen and (min-width: 375px) {
-  .headline-bord {
+  .sec-main-card {
     width: 90%;
     margin: 20px;
     display: flex;
@@ -54,12 +187,13 @@
     justify-content: space-around;
   }
 
-  .headline-h1 {
+  .sec-title {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .headline-p {
