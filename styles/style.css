@@ -8,12 +8,15 @@
 .main-color {
   color: #1a2236;
 }
-.white{
-  color:#FFFFFF;
+
+.white {
+  color: #fff;
 }
-.margin20{
+
+.margin20 {
   margin: 20px;
 }
+
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -46,33 +49,40 @@
   background-color: white;
   border: #1a2236 solid 1px;
 }
+
 .btn:active {
   color: #1a2236;
   background-color: white;
   border: #1a2236 solid 2px;
 }
+
 .headlineImage {
   width: 99%;
 }
-/*---------Projects Section----------*/
-.project{
+
+/* ---------Projects Section---------- */
+.project {
   width: 100%;
   display: grid;
 }
-.project img{
-width: 99.98%;
-height:186px;
+
+.project img {
+  width: 99.98%;
+  height: 186px;
 }
-.proj-card{
+
+.proj-card {
   background-color: #1a2236;
-  padding:  20px;
+  padding: 20px;
 }
-.proj-name{
-font-size: 20px;
-font-weight: 300;
+
+.proj-name {
+  font-size: 20px;
+  font-weight: 300;
 }
-.proj-langs{
-  margin: 20px 20px 20px 0;   
+
+.proj-langs {
+  margin: 20px 20px 20px 0;
   display: grid;
   grid-template-columns: 25% 30% 30%;
   font-size: 10.33px;
@@ -80,71 +90,82 @@ font-weight: 300;
   list-style: none;
 }
 
-.proj-langs li a{
+.proj-langs li a {
   margin: 10px 10px 10px 0;
-  padding: 5px;
-  background-color: #98DEDE;
+  background-color: #98dede;
   color: #1a2236;
   border: #1a2236 solid 0.5px;
-  padding: 6px 8px 6px 8px;  
+  padding: 6px 8px 6px 8px;
   text-decoration: inherit;
 }
-.proj-card .btn{
-  border: #FFFFFF solid 1px;
+
+.proj-card .btn {
+  border: #fff solid 1px;
   font-size: 16px;
 }
- .btn .bx{
+
+.btn .bx {
   margin-left: 10px;
   font-size: 25px;
   transform: rotateY(180deg);
   text-align: center;
 }
-/*---------------About section-------------------*/
-.blue-bg{
-  background-color: #1C528A;
+
+/* ---------------About section------------------- */
+.blue-bg {
+  background-color: #1c528a;
 }
-.red-bg{
-  background-color: #E2505C;
+
+.red-bg {
+  background-color: #e2505c;
 }
-.yellow-bg{
-  background-color:#FEBF52;
+
+.yellow-bg {
+  background-color: #febf52;
 }
-.about-sec .sec-main-card{
+
+.about-sec .sec-main-card {
   margin-bottom: 5px;
 }
-.skill-card{
-   display: grid;
-   margin: 20px;
-   margin-top: 5px;
+
+.skill-card {
+  display: grid;
+  margin: 20px;
+  margin-top: 5px;
 }
-.skill{
+
+.skill {
   width: 100%;
-  height:289px;
+  height: 289px;
   margin-top: 10px;
-  color: #FFFFFF;
+  color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 102px;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
 }
-.skill .skill-text{
+
+.skill .skill-text {
   width: 80%;
-  margin: 20PX;
+  margin: 20px;
   padding-left: 50px;
   grid-column: 1/5;
   grid-row: 1/3;
 }
-.skill-text h2{
-  margin: 20PX;
+
+.skill-text h2 {
+  margin: 20px;
   margin-left: 0;
   font-size: 20px;
   font-weight: 800;
 }
-.skill-text ul li{
+
+.skill-text ul li {
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
 }
-.skill img{
+
+.skill img {
   width: 102px;
   height: 102px;
   padding: 0;
