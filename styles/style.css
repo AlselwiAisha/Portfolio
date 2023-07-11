@@ -179,15 +179,9 @@
 }
 
 /* ------------------------ Contact me------------------------- */
-.contact-form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
 @media only screen and (min-width: 375px) {
-  .sec-main-car {
+  .sec-main-card {
     width: 90%;
     margin: 20px;
     display: flex;
@@ -196,7 +190,7 @@
   }
 
   .sec-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
@@ -211,4 +205,41 @@
     margin-bottom: 10px;
     line-height: 21px;
   }
+}
+
+.contact-form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-form label {
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #7d7c84;
+}
+
+.contact-form input {
+  padding: 23px 5px 5px 16px;
+  border-radius: 5px;
+  border-color: #dfdfe0;
+}
+
+.contact-form textarea {
+  padding: 14px 0px 0px 16px;
+}
+
+.final-btn {
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
