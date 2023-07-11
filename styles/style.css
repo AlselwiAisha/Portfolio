@@ -243,3 +243,9 @@
   letter-spacing: 0em;
   text-align: center;
 }
+
+/* ------------------------ Footer------------------------- */
+
+.footer {
+  background-color: #1a2236;
+}
