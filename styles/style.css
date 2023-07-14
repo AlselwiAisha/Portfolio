@@ -38,6 +38,11 @@
   margin: 30px 19px;
 }
 
+.headline .sec-title:hover {
+  transform: translate(10%, 0);
+  transition: ease 1s;
+}
+
 .btn {
   height: 50px;
   display: flex;
@@ -55,6 +60,7 @@
   color: #1a2236;
   background-color: white;
   border: #1a2236 solid 1px;
+  transition: ease 1s;
 }
 
 .btn:active {
@@ -291,7 +297,38 @@
   cursor: pointer;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.social-media img:hover {
+  animation: 1s ease-out rotate;
+}
+
 @media only screen and (min-width: 375px) {
+  .navbar-links a {
+    display: inline-block;
+  }
+
+  .navbar-links a::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    display: block;
+    background: #1a2236;
+    transition: 400ms;
+  }
+
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+
   .image_dots {
     display: none;
   }
@@ -450,14 +487,14 @@
     grid-template-columns: repeat(9, 11.1111%);
     grid-template-rows: repeat(8, auto);
     grid-template-areas:
-      '  .   .   img_ prj1 prj1 prj1 prj1 prj1 prj1'
-      '  .  titl  .   prj1 prj1 prj1 prj1 prj1 prj1'
-      '  .   .    .   img1 img1 img1 prj6 prj6 prj6'
-      'prj2 prj2 prj2 img1 img1 img1 prj6 prj6 prj6'
-      'prj2 prj2 prj2 img1 img1 img1 prj5 prj5 prj5'
-      'prj3 prj3 prj3 prj3 prj3   .  prj5 prj5 prj5'
-      'prj3 prj3 prj3 prj3 prj3 img2 img2 img2 img2'
-      'img3 img3 img3 img3 img3 prj4 prj4 prj4   . ';
+      "  .   .   img_ prj1 prj1 prj1 prj1 prj1 prj1"
+      "  .  titl  .   prj1 prj1 prj1 prj1 prj1 prj1"
+      "  .   .    .   img1 img1 img1 prj6 prj6 prj6"
+      "prj2 prj2 prj2 img1 img1 img1 prj6 prj6 prj6"
+      "prj2 prj2 prj2 img1 img1 img1 prj5 prj5 prj5"
+      "prj3 prj3 prj3 prj3 prj3   .  prj5 prj5 prj5"
+      "prj3 prj3 prj3 prj3 prj3 img2 img2 img2 img2"
+      "img3 img3 img3 img3 img3 prj4 prj4 prj4   . ";
   }
 
   .prj-sec .sec-title {
@@ -533,7 +570,7 @@
     position: relative;
   }
 
-  .project:hover .proj-card {
+  .project .proj-card {
     display: block;
     width: 100%;
     position: absolute;
@@ -542,7 +579,13 @@
     top: 35%;
     bottom: 0;
     z-index: 1;
+    opacity: 0;
     background-color: #1a2236f7;
+    transition: 1s ease;
+  }
+
+  .project:hover .proj-card {
+    opacity: 1;
   }
 
   .proj-langs {
