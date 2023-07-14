@@ -44,16 +44,15 @@ I'm using mainly html, css for building this project.
 
 ### Key Features <a name="key-features"></a>
 
-- **[Set up the linter for the project for writing clean code]**
-- **[Add the test file and node modules to the .gitignore file]**
-- **[Add the styling color using CSS]**
+- **[Responsive Design]**
+- **[Code Quality]**
+- **[Animations and Transitions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -108,6 +107,7 @@ To run tests, run the following command:
 ### Deployment
 
 You can deploy this project using:
+
 - github pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -127,9 +127,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[Add the navigation for the project to navigate over the pages]**
-- **[Add some animation style for the project to attract the user's attention]**
-- **[Use the semantics tags at the project]**
+- **[Javascript Implementation]**
+- **[Data Storage]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,6 +155,7 @@ If you like this project feel free to contact
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
 I would like to thank MicroVerse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
