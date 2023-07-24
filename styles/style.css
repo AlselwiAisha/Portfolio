@@ -353,7 +353,22 @@
     color: #1a2236;
     text-decoration: inherit;
   }
+  .navbar-links a {
+    display: inline-block;
+  }
 
+  .navbar-links a::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    display: block;
+    background: #1a2236;
+    transition: 400ms;
+  }
+
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
   .menuImage1{
     position: absolute;
     width: 80%;
