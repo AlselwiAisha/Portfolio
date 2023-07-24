@@ -352,10 +352,6 @@
     display: none;
   }
 
-  .navbar-links li {
-    margin: 10px;
-  }
-
   .navbar-links a {
     display: inline-block;
   }
@@ -363,7 +359,7 @@
   .navbar-links li a {
     font-size: 18px;
     font-weight: 400;
-    padding: 30px;
+    padding: 15px;
     color: #1a2236;
     text-decoration: inherit;
   }
