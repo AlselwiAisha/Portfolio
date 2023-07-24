@@ -368,8 +368,6 @@
     text-decoration: inherit;
   }
 
-
-
   .navbar-links a::after {
     content: "";
     width: 0;
