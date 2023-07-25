@@ -26,3 +26,55 @@ window.onscroll = () => {
   nav.classList.remove('heder-position');
   navBar.classList.remove('view-img');
 };
+
+/* -----------------------main projects--------------------*/
+
+const Projects = [
+  {
+    id: 1,
+    image: './Images/1.png',
+  },
+  {
+    id: 2,
+    image: './Images/2.png',
+  },
+  {
+    id: 3,
+    image: './Images/3.png',
+  },
+  {
+    id: 4,
+    image: './Images/4.png',
+  },
+  {
+    id: 5,
+    image: './Images/5.png',
+  },
+  {
+    id: 6,
+    image: './Images/6.png',
+  },
+];
+function createProjectCard() {
+  Projects.forEach((project) => {
+    const sampleTemplateModal = `
+    <div class="project prj${project.id}">
+    <img src="${project.image}" alt="" />
+    <div class="proj-card">
+      <h2 class="proj-name white">Project name goes here</h2>
+      <ul class="proj-langs">
+        <li><a href=""> HTML/CSS</a></li>
+        <li><a href=""> Ruby on Rails</a></li>
+        <li><a href=""> JavaScript</a></li>
+      </ul>
+      <button class="btn">
+        See this project <i class="bx bx-arrow-back"></i>
+      </button>
+    </div>
+  </div>
+`;
+    const element = document.querySelector('.prj-sec');
+    element.innerHTML += sampleTemplateModal;
+  });
+}
+createProjectCard();
