@@ -123,9 +123,31 @@
   text-decoration: inherit;
 }
 
+.Prj-btns {
+  width: 70%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
 .proj-card .btn {
   border: #fff solid 1px;
   font-size: 16px;
+}
+
+.Prj-btns .btn1 {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border: #000 solid 1px;
+  font-size: 16px;
+  color: #1a2236;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .btn .bx {
@@ -318,6 +340,116 @@
   animation: 1s ease-out rotate;
 }
 
+/* -------------Popup Window------------- */
+
+#overlay {
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1a2236e9;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 3%;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 1;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.modal.active {
+  transform: translate(-33%, -50%) scale(1);
+}
+
+.modal-work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleproj {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  margin-left: 0;
+}
+
+.titleproj .proj-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.imgs-grop {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgs-grop .main-img {
+  width: 100%;
+  height: 70%;
+}
+
+.NP-btn-img a i:hover {
+  cursor: pointer;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-work .proj-langs li a {
+  background-color: #fff;
+}
+
+.NP-btn-img {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc {
+  width: 100%;
+  margin: 5%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.prj-desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
 @media only screen and (min-width: 375px) {
   .navbar-links {
     position: absolute;
@@ -354,6 +486,12 @@
 
   .navbar-links a {
     display: inline-block;
+  }
+
+  .NP-btn-img a {
+    color: #fff;
+    font-size: 30px;
+    margin: 10px;
   }
 
   .navbar-links li a {
@@ -435,6 +573,16 @@
   .contImage,
   .contImage2 {
     display: none;
+  }
+
+  /* ----------Popup Wimdow---------- */
+
+  .next-prev-btns {
+    display: none;
+  }
+
+  .imgs img {
+    width: 25%;
   }
 }
 
@@ -676,15 +824,20 @@
     margin-top: 6%;
   }
 
+  .Prj-btns {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
   .proj-card .btn {
     width: 40%;
     font-size: 1vw;
+    padding: 10px;
     margin-top: 5%;
     font-weight: 500;
-    color: #1a2236;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
   }
 
   .proj-card .btn .bx {
@@ -692,13 +845,15 @@
     margin-left: 2%;
   }
 
-  .proj-card .btn:hover {
+  .proj-card .btn:hover,
+  .Prj-btns .btn1:hover {
     color: white;
     background-color: #1a2236;
     border: #fff solid 1px;
   }
 
-  .proj-card .btn:active {
+  .proj-card .btn:active,
+  .Prj-btns .btn1:active {
     color: #fff;
     background-color: #1a2236;
     border: #fff solid 2px;
@@ -900,5 +1055,42 @@
   .social-media {
     margin-right: 120px;
     padding: 0;
+  }
+
+  /* -------------Popup Window----------- */
+  .modal {
+    width: 90%;
+    height: 95%;
+    margin: 0;
+    padding: 3%;
+  }
+
+  .titleproj .proj-name {
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .desc {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+
+  .next-prev-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .next-prev-btns button {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 50px;
+    background-color: #7d7c8400;
+    border: none;
+  }
+
+  .imgs img {
+    width: 25%;
   }
 }
