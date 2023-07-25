@@ -125,28 +125,29 @@
 
 .Prj-btns {
   width: 70%;
+  margin: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: start;
 }
 
-.next-prev-btns {
-  display: flex;
-  justify-content: space-between;
+.proj-card .btn {
+  border: #fff solid 1px;
+  font-size: 16px;
 }
 
-.next-prev-btns button {
-  font-size: 18px;
-  font-weight: 300;
-  margin-top: 50px;
-  background-color: #7d7c8400;
-  border: none;
-}
-
-.proj-card .btn,
-.Prj-btns .btn {
+.Prj-btns .btn1 {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
   border: #000 solid 1px;
   font-size: 16px;
+  color: #1a2236;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .btn .bx {
@@ -340,24 +341,6 @@
 }
 
 /* -------------Popup Window------------- */
-.modal {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  padding: 5%;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  z-index: 1;
-  background-color: #fff;
-  border-radius: 16px;
-  overflow-y: auto;
-}
-
-.modal.active {
-  transform: translate(-33%, -50%) scale(1);
-}
 
 #overlay {
   position: fixed;
@@ -377,6 +360,25 @@
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding-left: 5%;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow-y: auto;
+}
+
+.modal.active {
+  transform: translate(-33%, -50%) scale(1);
 }
 
 .modal-work {
@@ -428,19 +430,10 @@
   justify-content: space-between;
 }
 
-.NP-btn-img a {
-  color: #fff;
-  font-size: 50px;
-}
-
-.imgs img {
-  width: 25%;
-}
-
 .desc {
-  width: 60%;
-  margin-top: 5%;
-  margin-left: 20%;
+  width: 100%;
+  margin: 5%;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -450,10 +443,6 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-}
-
-.next-prev-btns {
-  display: none;
 }
 
 @media only screen and (min-width: 375px) {
@@ -492,6 +481,12 @@
 
   .navbar-links a {
     display: inline-block;
+  }
+
+  .NP-btn-img a {
+    color: #fff;
+    font-size: 30px;
+    margin: 10px;
   }
 
   .navbar-links li a {
@@ -576,6 +571,14 @@
   }
 
   /* ----------Popup Wimdow---------- */
+
+  .next-prev-btns {
+    display: none;
+  }
+
+  .imgs img {
+    width: 25%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -816,17 +819,21 @@
     margin-top: 6%;
   }
 
+  .Prj-btns {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
   .proj-card .btn,
-  .Prj-btns .btn {
+  .Prj-btns .btn1 {
     width: 40%;
     font-size: 1vw;
+    padding: 10px;
     margin-top: 5%;
     font-weight: 500;
-    color: #1a2236;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
   }
 
   .proj-card .btn .bx {
@@ -835,14 +842,14 @@
   }
 
   .proj-card .btn:hover,
-  .Prj-btns .btn:hover {
+  .Prj-btns .btn1:hover {
     color: white;
     background-color: #1a2236;
     border: #fff solid 1px;
   }
 
   .proj-card .btn:active,
-  .Prj-btns .btn:active {
+  .Prj-btns .btn1:active {
     color: #fff;
     background-color: #1a2236;
     border: #fff solid 2px;
@@ -1054,7 +1061,27 @@
     padding: 5%;
   }
 
+  .desc {
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+
   .next-prev-btns {
-    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .next-prev-btns button {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 50px;
+    background-color: #7d7c8400;
+    border: none;
+  }
+
+  .imgs img {
+    width: 25%;
   }
 }

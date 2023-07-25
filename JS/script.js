@@ -79,7 +79,6 @@ function createProjectCard() {
 }
 createProjectCard();
 
-
 /* -----------------------popup window-------------------------*/
 
 const openPopButtons = document.querySelectorAll('.modal-btn');
@@ -118,12 +117,11 @@ function createModal(image) {
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
   <div class="Prj-btns">
-<button class="btn">See live <i class="fa fa-external-link" ></i>
+<button class="btn1">See live <i class="fa fa-external-link" ></i>
   </button>
-  <button class="btn">See source <i class="fa fa-github" ></i>
+  <button class="btn1">See source <i class="fa fa-github" ></i>
   </button></div>
-<div class="next-prev-btns
-">
+<div class="next-prev-btns">
   <button><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous project 
   </button>
   <button>Next project <i class="fa fa-arrow-right" aria-hidden="true"></i> 
