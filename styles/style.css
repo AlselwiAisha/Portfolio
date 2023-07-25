@@ -366,14 +366,13 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  padding-left: 5%;
+  padding: 3%;
   top: 50%;
   left: 33%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 1;
   background-color: #fff;
-  border-radius: 16px;
   overflow-y: auto;
 }
 
@@ -382,7 +381,7 @@
 }
 
 .modal-work {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -393,6 +392,12 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+  margin-left: 0;
+}
+
+.titleproj .proj-name {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .imgs-grop {
@@ -827,8 +832,7 @@
     align-items: start;
   }
 
-  .proj-card .btn,
-  .Prj-btns .btn1 {
+  .proj-card .btn {
     width: 40%;
     font-size: 1vw;
     padding: 10px;
@@ -1058,13 +1062,18 @@
     width: 90%;
     height: 95%;
     margin: 0;
-    padding: 5%;
+    padding: 3%;
+  }
+
+  .titleproj .proj-name {
+    font-size: 60px;
+    font-weight: 700;
   }
 
   .desc {
-    width: 60%;
+    width: 70%;
     margin-top: 5%;
-    margin-left: 20%;
+    margin-left: 15%;
   }
 
   .next-prev-btns {
