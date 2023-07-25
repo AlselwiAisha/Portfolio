@@ -122,7 +122,7 @@ function createModal(image) {
   </button>
   <button class="btn">See source <i class="fa fa-github" ></i>
   </button></div>
-<div class="
+<div class="next-prev-btns
 ">
   <button><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous project 
   </button>
