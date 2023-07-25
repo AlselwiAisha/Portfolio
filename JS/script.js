@@ -67,7 +67,7 @@ function createProjectCard() {
         <li><a href=""> Ruby on Rails</a></li>
         <li><a href=""> JavaScript</a></li>
       </ul>
-      <button class="btn">
+      <button class="btn modal-btn" id="${project.id}">
         See this project <i class="bx bx-arrow-back"></i>
       </button>
     </div>
@@ -78,3 +78,94 @@ function createProjectCard() {
   });
 }
 createProjectCard();
+
+
+/* -----------------------popup window-------------------------*/
+
+const openPopButtons = document.querySelectorAll('.modal-btn');
+const overlay = document.querySelector('#overlay');
+function createModal(image) {
+  const sampleTemplateModal = `
+  <div class="modal-work">
+  <div class="titleproj">
+  <h2 class="proj-name main-color">Project name goes here</h2>
+<img src="./Images/Union (1).png" alt="" class="data-close-button">
+</div>
+<ul class="proj-langs">
+  <li><a href=""> HTML/CSS</a></li>
+  <li><a href=""> Ruby on Rails</a></li>
+  <li><a href=""> JavaScript</a></li>
+</ul>
+<div class="imgs-grop">
+  <img src="${image}" alt="" class="main-img">
+  <div class="NP-btn-img">
+ <a href="#" class="btn-img"><i class="fa fa-angle-left"></i></a>
+ <a href="#" class="btn-img"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  </div>
+  <div class="imgs">
+    <img src="${image}" alt="">
+    <img src="${image}" alt="">
+    <img src="${image}" alt="">
+    <img src="${image}" alt="">
+  </div>
+</div>
+ <div class="desc">
+<p class="prj-desc main-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    <br><br>
+                    Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+  <div class="Prj-btns">
+<button class="btn">See live <i class="fa fa-external-link" ></i>
+  </button>
+  <button class="btn">See source <i class="fa fa-github" ></i>
+  </button></div>
+<div class="next-prev-btns">
+  <button><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous project 
+  </button>
+  <button>Next project <i class="fa fa-arrow-right" aria-hidden="true"></i> 
+  </button>
+  
+</div>  
+</div>
+</div>
+
+`;
+
+  return sampleTemplateModal;
+}
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+openPopButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const name = e.target.id;
+    const prj = Projects[name - 1];
+    const modal = createModal(prj.image);
+    const element = document.createElement('div');
+    element.innerHTML = modal;
+    element.classList.add('modal');
+    const addElement = document.getElementById('overlay');
+    addElement.after(element);
+    openModal(element);
+    const closePopButtons = document.querySelectorAll('.data-close-button');
+    closePopButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal);
+      });
+    });
+  });
+});
