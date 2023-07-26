@@ -203,7 +203,7 @@ function getFormData() {
   return formData;
 }
 
-form.addEventListener('submit', () => {
+form.addEventListener('change', () => {
   const formData = getFormData();
   localStorage.setItem('formData', JSON.stringify(formData));
 });
