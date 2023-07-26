@@ -150,7 +150,7 @@ Feel free to check the [issues page](https://github.com/AlselwiAisha/Portfolio/i
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project feel free to contact
+If you like this project feel free to contact:
 
 - GitHub: [@githubhandle](https://github.com/AlselwiAisha)
 
