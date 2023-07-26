@@ -173,7 +173,7 @@ openPopButtons.forEach((button) => {
 const form = document.querySelector('.contact-form');
 const email = document.querySelector('#email');
 const errMsg = document.querySelector('.err-msg');
-const msgText = 'Write the email in lowercase, please';
+const msgText = 'Please, write the email in lowercase';
 
 form.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
