@@ -1032,6 +1032,13 @@
     grid-row: 3/4;
   }
 
+  .err-msg {
+    width: 100%;
+    margin-top: 20px;
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+
   .contImage2 {
     width: 100%;
     height: 100%;
