@@ -54,7 +54,7 @@ I'm using mainly html, css for building this project.
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> --[Live Demo](https://alselwiaisha.github.io/Portfolio/)
+- [Live Demo](https://alselwiaisha.github.io/Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
