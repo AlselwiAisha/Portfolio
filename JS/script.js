@@ -33,26 +33,53 @@ const Projects = [
   {
     id: 1,
     image: './Images/1.png',
+    desc:`[To-Do-list] This project is part of my Microverse exercises,
+     where we start building a To-Do-list 
+    application for storing a To-Do Tasks List.`,
+    name:"ToDo list",
   },
   {
     id: 2,
     image: './Images/2.png',
+    desc:`[Portfolio] is my first microverse project. In this project,
+    use HTML and CSS by adding an index and style file,
+     we also used linters to analyze our source code to flag programming
+      errors, bugs, stylistic errors, and suspicious 
+      constructs in addition to creating the test file and putting 
+      it in the gitignore to learn more about the gitignore file.`,
+   name:"Portfolio",
   },
   {
     id: 3,
     image: './Images/3.png',
+    desc:`[Awesome-books] is a simple HTML, CSS and JavaScript project.
+    you can Add new book with author or delete `,
+   name:"Awesome-books",
   },
   {
     id: 4,
     image: './Images/4.png',
+    desc:` a website to share informations about episodes of a TV show.`,
+   name:"TV show",
   },
   {
     id: 5,
     image: './Images/5.png',
+    desc:`"Space Travelers' Hub" is working with the real live data from the SpaceX API.
+    This application for a company that provides commercial and scientific space travel services.
+     The application will allow users to book rockets and join selected space missions. 
+     Create the user interface using React.`,
+   name:"Space Travelers' Hub",
   },
   {
     id: 6,
     image: './Images/6.png',
+    desc:`This project is a web application that allows users to reserve
+     books from a library. The user can also see the list of books that
+      are available in the library. The user can reserve a book by clicking
+       on the reserve button. The user can also see the list of books that
+        they have reserved.`,
+   name:"Books Library",
   },
 ];
 function createProjectCard() {
@@ -61,7 +88,7 @@ function createProjectCard() {
     <div class="project prj${project.id}">
     <img src="${project.image}" alt="" />
     <div class="proj-card">
-      <h2 class="proj-name white">Project name goes here</h2>
+      <h2 class="proj-name white">${project.name}</h2>
       <ul class="proj-langs">
         <li><a href=""> HTML/CSS</a></li>
         <li><a href=""> Ruby on Rails</a></li>
@@ -83,7 +110,7 @@ createProjectCard();
 
 const openPopButtons = document.querySelectorAll('.modal-btn');
 const overlay = document.querySelector('#overlay');
-function createModal(image) {
+function createModal(image,desc) {
   const sampleTemplateModal = `
   <div class="modal-work">
   <div class="titleproj">
@@ -109,13 +136,7 @@ function createModal(image) {
   </div>
 </div>
  <div class="desc">
-<p class="prj-desc main-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    <br><br>
-                    Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+<p class="prj-desc main-color">${desc}</p>
   <div class="Prj-btns">
 <button class="btn1">See live <i class="fa fa-external-link" ></i>
   </button>
@@ -152,7 +173,7 @@ openPopButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     const name = e.target.id;
     const prj = Projects[name - 1];
-    const modal = createModal(prj.image);
+    const modal = createModal(prj.image,prj.desc);
     const element = document.createElement('div');
     element.innerHTML = modal;
     element.classList.add('modal');
