@@ -33,53 +33,65 @@ const Projects = [
   {
     id: 1,
     image: './Images/1.png',
-    desc:`[To-Do-list] This project is part of my Microverse exercises,
+    desc: `[To-Do-list] This project is part of my Microverse exercises,
      where we start building a To-Do-list 
     application for storing a To-Do Tasks List.`,
-    name:"ToDo list",
+    name: 'ToDo list',
+    demo: 'https://alselwiaisha.github.io/To-Do-list-M2/dist/',
+    source: 'https://github.com/AlselwiAisha/To-Do-list-M2',
   },
   {
     id: 2,
     image: './Images/2.png',
-    desc:`[Portfolio] is my first microverse project. In this project,
+    desc: `[Portfolio] is my first microverse project. In this project,
     use HTML and CSS by adding an index and style file,
      we also used linters to analyze our source code to flag programming
       errors, bugs, stylistic errors, and suspicious 
       constructs in addition to creating the test file and putting 
       it in the gitignore to learn more about the gitignore file.`,
-   name:"Portfolio",
+    name: 'Portfolio',
+    demo: 'https://alselwiaisha.github.io/Portfolio/',
+    source: 'https://github.com/AlselwiAisha/Portfolio',
   },
   {
     id: 3,
     image: './Images/3.png',
-    desc:`[Awesome-books] is a simple HTML, CSS and JavaScript project.
+    desc: `[Awesome-books] is a simple HTML, CSS and JavaScript project.
     you can Add new book with author or delete `,
-   name:"Awesome-books",
+    name: 'Awesome-books',
+    demo: 'https://alselwiaisha.github.io/Awesome-books-M2/',
+    source: 'https://github.com/AlselwiAisha/Awesome-books-M2',
   },
   {
     id: 4,
     image: './Images/4.png',
-    desc:` a website to share informations about episodes of a TV show.`,
-   name:"TV show",
+    desc: ' a website to share informations about episodes of a TV show.',
+    name: 'TV show',
+    demo: 'https://alselwiaisha.github.io/JavaScriptGroupCapstone/dist/',
+    source: 'https://github.com/AlselwiAisha/JavaScriptGroupCapstone',
   },
   {
     id: 5,
     image: './Images/5.png',
-    desc:`"Space Travelers' Hub" is working with the real live data from the SpaceX API.
+    desc: `"Space Travelers' Hub" is working with the real live data from the SpaceX API.
     This application for a company that provides commercial and scientific space travel services.
      The application will allow users to book rockets and join selected space missions. 
      Create the user interface using React.`,
-   name:"Space Travelers' Hub",
+    name: "Space Travelers' Hub",
+    demo: 'https://space-travelers-hub-bvt6.onrender.com/',
+    source: 'https://github.com/Chimoneg27/Travelers-Space-Hub',
   },
   {
     id: 6,
     image: './Images/6.png',
-    desc:`This project is a web application that allows users to reserve
+    desc: `This project is a web application that allows users to reserve
      books from a library. The user can also see the list of books that
       are available in the library. The user can reserve a book by clicking
        on the reserve button. The user can also see the list of books that
         they have reserved.`,
-   name:"Books Library",
+    name: 'Books Library',
+    demo: 'https://page-to-page.onrender.com/',
+    source: 'https://github.com/leloufadel/Page-To-page-Library-Frontend',
   },
 ];
 function createProjectCard() {
@@ -110,7 +122,7 @@ createProjectCard();
 
 const openPopButtons = document.querySelectorAll('.modal-btn');
 const overlay = document.querySelector('#overlay');
-function createModal(image,desc) {
+function createModal(image, desc, demo, source){
   const sampleTemplateModal = `
   <div class="modal-work">
   <div class="titleproj">
@@ -138,10 +150,10 @@ function createModal(image,desc) {
  <div class="desc">
 <p class="prj-desc main-color">${desc}</p>
   <div class="Prj-btns">
-<button class="btn1">See live <i class="fa fa-external-link" ></i>
-  </button>
-  <button class="btn1">See source <i class="fa fa-github" ></i>
-  </button></div>
+  <a class="btn1" href='${demo}'>See live <i class="fa fa-external-link" ></i>
+  </a>
+  <a class="btn1" href='${source}'>See source <i class="fa fa-github" ></i>
+  </a></div>
 <div class="next-prev-btns">
   <button><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous project 
   </button>
@@ -173,7 +185,7 @@ openPopButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     const name = e.target.id;
     const prj = Projects[name - 1];
-    const modal = createModal(prj.image,prj.desc);
+    const modal = createModal(prj.image, prj.desc, prj.demo, prj.source);
     const element = document.createElement('div');
     element.innerHTML = modal;
     element.classList.add('modal');
