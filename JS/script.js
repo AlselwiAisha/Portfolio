@@ -122,7 +122,7 @@ createProjectCard();
 
 const openPopButtons = document.querySelectorAll('.modal-btn');
 const overlay = document.querySelector('#overlay');
-function createModal(image, desc, demo, source){
+function createModal(image, desc, demo, source) {
   const sampleTemplateModal = `
   <div class="modal-work">
   <div class="titleproj">
